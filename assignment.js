@@ -24,7 +24,7 @@ function budgetCalculator(quantityOfWatch, quantityOfMobile, quantityOfLaptop) {
         var totalCost = costOfWatch + costOfMobile + costOfLaptop;
     }
     else {
-        return "Your quantity number is negative, please try again."
+        return "Your quantity number cann't be negative."
     }
     return totalCost;
 }
@@ -55,7 +55,7 @@ function hotelCost(livingDays) {                                    /** livingDa
         }
     }
     else {
-        return "Your living days is negative, please try again."
+        return "Your living days cann't be negative."
     }
 }
 
@@ -70,7 +70,7 @@ function megaFriend(friendsName) {
     }
     else {
         for (var i = 0; i < friendsName.length; i++) {
-            var letters = /^[A-Za-z]+$/;
+            var letters = /^[A-Za-z -]+$/;                  /** Human's name cann't contain number, but name can contain Hyphen(-) example: Al-Amin */
             if (friendsName[i].match(letters)) {
                 if (friendsName[i].length > nameSize) {
                     nameSize = friendsName[i].length;
