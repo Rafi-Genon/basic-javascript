@@ -1,8 +1,8 @@
 // https://github.com/Rafi-Genon/basic-javascript
 
 
-function kilometerToMeter(kilometer){
-    var meter = kilometer*1000;
+function kilometerToMeter(kilometer) {
+    var meter = kilometer * 1000;
     return meter;
 }
 
@@ -21,8 +21,9 @@ function budgetCalculator(quantityOfWatch, quantityOfMobile, quantityOfLaptop) {
     if (quantityOfLaptop < 0) {
         return "Your input number is negative please try again"
     }
-    else{
-    var costOfLaptop = quantityOfLaptop * 500;}
+    else {
+        var costOfLaptop = quantityOfLaptop * 500;
+    }
     var totalCost = costOfWatch + costOfMobile + costOfLaptop;
     return totalCost;
 }
@@ -59,14 +60,19 @@ function megaFriend(friendsName) {
     var largestName = "";;
 
     for (var i = 0; i < friendsName.length; i++) {
-        if (friendsName[i].length > nameSize) {
-            var nameSize = friendsName[i].length;
-            largestName = friendsName[i];
+        var letters = /^[A-Za-z]+$/;
+        if (friendsName[i].match(letters)) {
+            if (friendsName[i].length > nameSize) {
+                var nameSize = friendsName[i].length;
+                largestName = friendsName[i];
+            }
+        }
+        else{
+            return "Your name cann't be in number"
         }
     }
-    return largestName;
+    return largestName
 }
-
-var result = megaFriend(["mofizpagla","mafi","rafi","rakib", "mofizcagla"])
-console.log(result)
+    var result = megaFriend(["mofizpagla", "maf85i", "rafi", "rakib", "mofizcagla"])
+    console.log(result)
 
