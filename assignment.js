@@ -12,6 +12,7 @@ function kilometerToMeter(kilometer) {
     return meter;
 }
 
+
 /** Problem 2: Budget calculator function started from below */
 
 function budgetCalculator(quantityOfWatch, quantityOfMobile, quantityOfLaptop) {
