@@ -2,26 +2,29 @@
 
 
 function kilometerToMeter(kilometer) {
-    var meter = kilometer * 1000;
+    if (kilometer >= 0) {
+        var meter = kilometer * 1000;
+    }
+    else{
+        return "Distance cann't be negative."
+    }
     return meter;
 }
 
+var result = kilometerToMeter(-2)
+console.log(result)
 
 function budgetCalculator(quantityOfWatch, quantityOfMobile, quantityOfLaptop) {
-    var costOfWatch = quantityOfWatch * 50;
-    if (quantityOfMobile < 0) {
-        return "Your input number is negative please try again"
-    }
-    else {
+
+    if (quantityOfWatch >= 0 && quantityOfMobile >= 0 && quantityOfLaptop >= 0) {
+        var costOfWatch = quantityOfWatch * 50;
         var costOfMobile = quantityOfMobile * 100;
-    }
-    if (quantityOfLaptop < 0) {
-        return "Your input number is negative please try again"
+        var costOfLaptop = quantityOfLaptop * 500;
+        var totalCost = costOfWatch + costOfMobile + costOfLaptop;
     }
     else {
-        var costOfLaptop = quantityOfLaptop * 500;
+        return "Your inputed number is negative, please try again"
     }
-    var totalCost = costOfWatch + costOfMobile + costOfLaptop;
     return totalCost;
 }
 
@@ -70,9 +73,4 @@ function megaFriend(friendsName) {
     }
     return largestName
 }
-var result = megaFriend([])
-console.log(result)
-
-var result = kilometerToMeter(5)
-console.log(result)
 
