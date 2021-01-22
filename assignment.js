@@ -7,9 +7,6 @@ function kilometerToMeter(kilometer) {
 }
 
 
-
-
-
 function budgetCalculator(quantityOfWatch, quantityOfMobile, quantityOfLaptop) {
     var costOfWatch = quantityOfWatch * 50;
     if (quantityOfMobile < 0) {
@@ -27,8 +24,6 @@ function budgetCalculator(quantityOfWatch, quantityOfMobile, quantityOfLaptop) {
     var totalCost = costOfWatch + costOfMobile + costOfLaptop;
     return totalCost;
 }
-
-
 
 
 function hotelCost(livingDays) {
@@ -53,12 +48,12 @@ function hotelCost(livingDays) {
     }
 }
 
-
-
 function megaFriend(friendsName) {
     var nameSize = 0;
-    var largestName = "";;
-
+    var largestName = "";
+    if(friendsName.length == 0){
+        return "Your array is empty, please input names"
+    }
     for (var i = 0; i < friendsName.length; i++) {
         var letters = /^[A-Za-z]+$/;
         if (friendsName[i].match(letters)) {
@@ -67,12 +62,15 @@ function megaFriend(friendsName) {
                 largestName = friendsName[i];
             }
         }
-        else{
-            return "Your name cann't be in number"
+        else {
+            return "Human's name cann't contain number"
         }
     }
     return largestName
 }
-    var result = megaFriend(["mofizpagla", "maf85i", "rafi", "rakib", "mofizcagla"])
-    console.log(result)
+// var result = megaFriend(["rafi", "rakib", "rakibodfdfdsf", "rakin", "mafi"])
+// console.log(result)
+
+var result = kilometerToMeter(5)
+console.log(result)
 
