@@ -1,7 +1,27 @@
 // https://github.com/Rafi-Genon/basic-javascript
 
 
-function hotelCost(livingDays){
+function budgetCalculator(quantityOfWatch, quantityOfMobile, quantityOfLaptop) {
+    var costOfWatch = quantityOfWatch * 50;
+    if (quantityOfMobile < 0) {
+        return "Your input number is negative please try again"
+    }
+    else {
+        var costOfMobile = quantityOfMobile * 100;
+    }
+    if (quantityOfLaptop < 0) {
+        return "Your input number is negative please try again"
+    }
+    else{
+    var costOfLaptop = quantityOfLaptop * 500;}
+    var totalCost = costOfWatch + costOfMobile + costOfLaptop;
+    return totalCost;
+}
+
+
+
+
+function hotelCost(livingDays) {
     var taka = 0;
     if (livingDays <= 10) {
         taka = livingDays * 100;
@@ -13,13 +33,13 @@ function hotelCost(livingDays){
         taka = day0to10Bill + after10DaysBill;
         return taka;
     }
-    else{
+    else {
         var day0to10Bill = 10 * 100;
         var day11To20Bill = 10 * 80;
         var after20DaysBill = (livingDays - 20) * 50;
         taka = day0to10Bill + day11To20Bill + after20DaysBill;
         return taka;
-    
+
     }
 }
 
@@ -37,3 +57,7 @@ function megaFriend(friendsName) {
     }
     return largestName;
 }
+
+var result = budgetCalculator(5,2, 1)
+console.log(result)
+
