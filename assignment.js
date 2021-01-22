@@ -1,6 +1,15 @@
 // https://github.com/Rafi-Genon/basic-javascript
 
 
+function kilometerToMeter(kilometer){
+    var meter = kilometer*1000;
+    return meter;
+}
+
+
+
+
+
 function budgetCalculator(quantityOfWatch, quantityOfMobile, quantityOfLaptop) {
     var costOfWatch = quantityOfWatch * 50;
     if (quantityOfMobile < 0) {
@@ -58,6 +67,6 @@ function megaFriend(friendsName) {
     return largestName;
 }
 
-var result = budgetCalculator(5,2, 1)
+var result = megaFriend(["mofizpagla","mafi","rafi","rakib", "mofizcagla"])
 console.log(result)
 
