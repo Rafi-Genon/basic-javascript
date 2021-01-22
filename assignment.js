@@ -51,25 +51,27 @@ function hotelCost(livingDays) {
 function megaFriend(friendsName) {
     var nameSize = 0;
     var largestName = "";
-    if(friendsName.length == 0){
-        return "Your array is empty, please input names"
+    if (friendsName.length == 0) {
+        return "Your array is empty, please input names."
     }
-    for (var i = 0; i < friendsName.length; i++) {
-        var letters = /^[A-Za-z]+$/;
-        if (friendsName[i].match(letters)) {
-            if (friendsName[i].length > nameSize) {
-                var nameSize = friendsName[i].length;
-                largestName = friendsName[i];
+    else {
+        for (var i = 0; i < friendsName.length; i++) {
+            var letters = /^[A-Za-z]+$/;
+            if (friendsName[i].match(letters)) {
+                if (friendsName[i].length > nameSize) {
+                    var nameSize = friendsName[i].length;
+                    largestName = friendsName[i];
+                }
             }
-        }
-        else {
-            return "Human's name cann't contain number"
+            else {
+                return "Human's name cann't contain number."
+            }
         }
     }
     return largestName
 }
-// var result = megaFriend(["rafi", "rakib", "rakibodfdfdsf", "rakin", "mafi"])
-// console.log(result)
+var result = megaFriend([])
+console.log(result)
 
 var result = kilometerToMeter(5)
 console.log(result)
